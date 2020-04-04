@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 1892534755448049562}
   - component: {fileID: 1892534755448049563}
   - component: {fileID: 2400363960204102359}
+  - component: {fileID: 898122226623748197}
   m_Layer: 8
   m_Name: PrefabTeclado
-  m_TagString: Untagged
+  m_TagString: Keyboard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,3 +133,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &898122226623748197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892534755448049564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9814656, y: 1.0668403, z: 0.2}
+  m_Center: {x: 0.0030779603, y: -0.07695448, z: 0}

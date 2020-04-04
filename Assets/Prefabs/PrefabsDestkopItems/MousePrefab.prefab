@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7560399784097758759}
   - component: {fileID: 7560399784097758758}
+  - component: {fileID: 4800319939122165605}
   m_Layer: 8
-  m_Name: Mouse
+  m_Name: MousePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &4800319939122165605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560399784097758809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6666517, y: 4.4864883, z: 0.19999997}
+  m_Center: {x: -0.0000010169767, y: -0.055898275, z: 0}
