@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6055013321505371843}
   - component: {fileID: 6055013321505371852}
-  m_Layer: 0
-  m_Name: recibo_arriendo
+  m_Layer: 9
+  m_Name: PrefabRecibo_arriendo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

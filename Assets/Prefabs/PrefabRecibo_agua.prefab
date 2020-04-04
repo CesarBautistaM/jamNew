@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8628815603914511770}
   - component: {fileID: 8628815603914511771}
-  m_Layer: 0
-  m_Name: recibo_agua
+  m_Layer: 9
+  m_Name: PrefabRecibo_agua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
