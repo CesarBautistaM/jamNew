@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class click : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static bool enMouse { get; set; }
     void Start()
     {
         
@@ -15,8 +15,12 @@ public class click : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay(Collider icono)
     {
-        Debug.Log("ENTRO");
+        if(Input.GetMouseButtonDown(0)==true && enMouse == true)
+        {
+            Debug.Log("col");
+        }
+        
     }
 }

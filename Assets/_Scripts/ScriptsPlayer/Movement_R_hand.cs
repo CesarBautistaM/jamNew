@@ -51,27 +51,25 @@ public class Movement_R_hand : MonoBehaviour
         
     }
 
-   
+    private void OnTriggerExit(Collider other)
+    {
+        click.enMouse = false;
+    }
     private void OnTriggerStay(Collider colicion)
     {
-       
+        click.enMouse = true;
         //colicion con mouse
         if (colicion.gameObject.name.Equals("Mouse"))
         {
            
             Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
             Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
-
             
+
+
                 if (Input.GetMouseButton(0) == true)
                 {
-                    if (Input.GetMouseButtonDown(0) == true)
-                    {
-                        if (posicionPuntero.x > -335)
-                        {
-                            Debug.Log("abrio");
-                        }
-                    }
+                
                     if (transform.position.x > -70 && transform.position.x < 50 && transform.position.y < -215 && transform.position.y > -280)
                     {
                         
@@ -83,9 +81,10 @@ public class Movement_R_hand : MonoBehaviour
                         GameObject.Find("Puntero").GetComponent<Transform>().position = posicionPuntero;
                     }
                 }
-            
+
 
         }
+       
         
 
         
