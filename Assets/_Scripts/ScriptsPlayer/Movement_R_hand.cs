@@ -51,17 +51,20 @@ public class Movement_R_hand : MonoBehaviour
         
     }
 
-   
+    private void OnTriggerExit(Collider other)
+    {
+        click.enMouse = false;
+    }
     private void OnTriggerStay(Collider colicion)
     {
-       
+        click.enMouse = true;
         //colicion con mouse
         if (colicion.gameObject.name.Equals("Mouse"))
         {
            
             Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
             Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
-            click.enMouse = true;
+            
 
 
                 if (Input.GetMouseButton(0) == true)
@@ -81,10 +84,7 @@ public class Movement_R_hand : MonoBehaviour
 
 
         }
-        else
-        {
-            click.enMouse = false;
-        }
+       
         
 
         

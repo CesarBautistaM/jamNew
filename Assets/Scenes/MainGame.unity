@@ -1283,6 +1283,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1554941120}
     m_Modifications:
+    - target: {fileID: -2289240517358996612, guid: 9061813f7efbe014a9a6567a53b54e03,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4800319939122165605, guid: 9061813f7efbe014a9a6567a53b54e03,
         type: 3}
       propertyPath: m_Size.x
@@ -1356,7 +1361,7 @@ PrefabInstance:
     - target: {fileID: 7560399784097758759, guid: 9061813f7efbe014a9a6567a53b54e03,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560399784097758759, guid: 9061813f7efbe014a9a6567a53b54e03,
         type: 3}
@@ -1393,7 +1398,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouse
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2289240517358996612, guid: 9061813f7efbe014a9a6567a53b54e03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9061813f7efbe014a9a6567a53b54e03, type: 3}
 --- !u!1 &1112676629
 GameObject:
