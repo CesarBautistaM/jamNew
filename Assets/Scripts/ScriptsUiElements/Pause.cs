@@ -27,8 +27,6 @@ public class Pause : MonoBehaviour
 
         canvas.enabled = false;
         Arrow.enabled = false;
-        // Codes.enabled = false;
-
     }
 
     // Update is called once per frame
@@ -40,27 +38,22 @@ public class Pause : MonoBehaviour
             active = !active;
             ContinueText.text = ("Press Space To continue");
             canvas.enabled = active;
-            // Codes.enabled = active;
             ExitText.enabled = false;
-            // Time.timeScale = 0;
-
             if (this.active) GameManager.instance.PauseGame();
             else GameManager.instance.UnpauseGame();
-
         }
 
         /* Método para el Game Over
-        if (ShotDown.hp == 0|| CameraOut)
+        if (ShotDown)
          {
-
              PanelText.text = ("Game Over");
              ContinueText.text = ("Continue");
              ExitText.enabled = true;
              Arrow.enabled = true;
              canvas.enabled = true;
              shotdown = true;
-             GameOver = 1f;
-             Time.timeScale = 0;
+              if (this.active) GameManager.instance.PauseGame();
+            else GameManager.instance.UnpauseGame();
              MenuSelector();         
          }*/
 
@@ -73,8 +66,8 @@ public class Pause : MonoBehaviour
             ExitText.enabled = false;
             Time.timeScale = 1;
             shotdown = false;
-            /*KO = 0f;
-            ShotDown.hp = ShotDown.MaxHp;*/
+            /*KO ;
+            ShotDown.*/
         }
 
         void MenuSelector()
@@ -110,8 +103,6 @@ public class Pause : MonoBehaviour
                 SceneManager.LoadScene("NuevoJuego");
                 Predetermined();
             }
-
-
         }
     }
 }
