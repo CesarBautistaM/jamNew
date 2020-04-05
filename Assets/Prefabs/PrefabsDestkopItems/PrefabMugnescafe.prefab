@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2988683659941548393}
   - component: {fileID: 2988683659941548392}
   - component: {fileID: 5805770142348676499}
-  - component: {fileID: 6593434345852383169}
   m_Layer: 8
   m_Name: PrefabMugnescafe
   m_TagString: Untagged
@@ -96,22 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.48591, y: 4.6872225, z: 0.2}
   m_Center: {x: 0.2570448, y: 0.5140972, z: 0}
---- !u!95 &6593434345852383169
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2988683659941548311}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5ff6a60d140aa38438e2bd645c78317b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

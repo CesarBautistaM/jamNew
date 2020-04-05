@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2116894676605778346}
   - component: {fileID: 3754128015191451844}
   - component: {fileID: 3754128015191451845}
-  - component: {fileID: 8341961043498786274}
   m_Layer: 8
-  m_Name: PrefabNonFlyBug
+  m_Name: Bug
   m_TagString: Bugs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,22 +112,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4999999, y: 1.4999999, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &8341961043498786274
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116894676605778389}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d68ff830afe77a4d8210e6280170ae4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
