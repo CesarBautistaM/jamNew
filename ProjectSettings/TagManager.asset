@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Keyboard
+  - Bugs
+  - Desktop
   layers:
   - Default
   - TransparentFX
