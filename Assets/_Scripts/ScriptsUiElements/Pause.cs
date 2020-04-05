@@ -57,53 +57,53 @@ public class Pause : MonoBehaviour
              MenuSelector();         
          }*/
 
-        void Predetermined()
-        {
-            Arrow.enabled = false;
-            PanelText.text = ("Pause");
-            ContinueText.text = ("Press Enter To continue");
-            canvas.enabled = false;
-            ExitText.enabled = false;
-            Time.timeScale = 1;
-            shotdown = false;
-            /*KO ;
-            ShotDown.*/
-        }
+        // void Predetermined()
+        // {
+        //     Arrow.enabled = false;
+        //     PanelText.text = ("Pause");
+        //     ContinueText.text = ("Press Enter To continue");
+        //     canvas.enabled = false;
+        //     ExitText.enabled = false;
+        //     Time.timeScale = 1;
+        //     shotdown = false;
+        //     /*KO ;
+        //     ShotDown.*/
+        // }
 
-        void MenuSelector()
-        {
-            bool up = Input.GetKeyDown("up");
-            bool down = Input.GetKeyDown("down");
-            if (up) indice--;
-            if (down) indice++;
-            if (indice > lista.transform.childCount - 1) indice = 0;
-            if (indice < 0) indice = lista.transform.childCount - 1;
-            if (up || down) Dibujar();
-            if (Input.GetKeyDown("return")) Accion();
+        // void MenuSelector()
+        // {
+        //     bool up = Input.GetKeyDown("up");
+        //     bool down = Input.GetKeyDown("down");
+        //     if (up) indice--;
+        //     if (down) indice++;
+        //     if (indice > lista.transform.childCount - 1) indice = 0;
+        //     if (indice < 0) indice = lista.transform.childCount - 1;
+        //     if (up || down) Dibujar();
+        //     if (Input.GetKeyDown("return")) Accion();
 
-        }
+        // }
 
-        void Dibujar()
-        {
-            Transform opcion = lista.transform.GetChild(indice);
-            Arrow.transform.position = opcion.position;
-        }
+        // void Dibujar()
+        // {
+        //     Transform opcion = lista.transform.GetChild(indice);
+        //     Arrow.transform.position = opcion.position;
+        // }
 
-        void Accion()
-        {
-            Transform opcion = lista.transform.GetChild(indice);
-            if (opcion.gameObject.name == "TxtExit")
-            {
-                Predetermined();
-                print("cerrando Juego");
-                SceneManager.LoadScene("Menu");
-            }
-            else if (opcion.gameObject.name == "TxtContinue")
-            {
-                SceneManager.LoadScene("NuevoJuego");
-                Predetermined();
-            }
-        }
+        // void Accion()
+        // {
+        //     Transform opcion = lista.transform.GetChild(indice);
+        //     if (opcion.gameObject.name == "TxtExit")
+        //     {
+        //         Predetermined();
+        //         print("cerrando Juego");
+        //         SceneManager.LoadScene("Menu");
+        //     }
+        //     else if (opcion.gameObject.name == "TxtContinue")
+        //     {
+        //         SceneManager.LoadScene("NuevoJuego");
+        //         Predetermined();
+        //     }
+        // }
     }
 }
 
