@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8427347103623652672
+--- !u!1 &2116894676605778389
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8427347103623652674}
-  - component: {fileID: 8427347103623652675}
-  - component: {fileID: 3435298792992992733}
-  - component: {fileID: 4539007816701397613}
+  - component: {fileID: 2116894676605778347}
+  - component: {fileID: 2116894676605778346}
+  - component: {fileID: 3754128015191451844}
+  - component: {fileID: 3754128015191451845}
+  - component: {fileID: 8341961043498786274}
   m_Layer: 8
-  m_Name: PrefabRouter
-  m_TagString: Untagged
+  m_Name: PrefabNonFlyBug
+  m_TagString: Bugs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8427347103623652674
+--- !u!4 &2116894676605778347
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427347103623652672}
+  m_GameObject: {fileID: 2116894676605778389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.93, y: 10.33, z: -80}
-  m_LocalScale: {x: 7.5045, y: 7.5045, z: 7.5045}
+  m_LocalPosition: {x: 736, y: 98, z: -211}
+  m_LocalScale: {x: 92.64, y: 64.37, z: 10.940466}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8427347103623652675
+--- !u!212 &2116894676605778346
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427347103623652672}
+  m_GameObject: {fileID: 2116894676605778389}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,28 +73,57 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8204e139f16c2854289f7126ad622bf3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc8c465948fbfb64f9e5aecb2273990b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 1.99}
+  m_Size: {x: 1, y: 0.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3435298792992992733
+--- !u!54 &3754128015191451844
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116894676605778389}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &3754128015191451845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116894676605778389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4999999, y: 1.4999999, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8341961043498786274
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427347103623652672}
+  m_GameObject: {fileID: 2116894676605778389}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: def821c47b05f1840a7a4e34a1af13e5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4d68ff830afe77a4d8210e6280170ae4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -102,16 +132,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &4539007816701397613
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427347103623652672}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.8166795, y: 0.8759737, z: 0}
-  m_Center: {x: 0.007051179, y: -0.55701256, z: 0}
