@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,55 +11,58 @@ public class Pause : MonoBehaviour
     public Text Arrow;
     public InputField Codes;
     public Text ExitText;
-  
+
     public GameObject flecha, lista, Panel;
     int indice = 0;
 
     public bool active;
     public Canvas canvas;
-    
+
 
     public bool shotdown = false;
 
     void Start()
     {
         canvas = GetComponent<Canvas>();
-        
+
         canvas.enabled = false;
         Arrow.enabled = false;
-        Codes.enabled = false;
-        
+        // Codes.enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-            if (Input.GetKeyDown("space"))
-            {
-                active = !active;
-                ContinueText.text = ("Press Space To continue"); 
-                canvas.enabled = active;
-                Codes.enabled = active;
-                ExitText.enabled = false;
-                Time.timeScale = (active) ? 0 : 1;
-            Time.timeScale = 0;
-            }
-
-       /* Método para el Game Over
-       if (ShotDown.hp == 0|| CameraOut)
+        if (Input.GetKeyDown("space"))
         {
-            
-            PanelText.text = ("Game Over");
-            ContinueText.text = ("Continue");
-            ExitText.enabled = true;
-            Arrow.enabled = true;
-            canvas.enabled = true;
-            shotdown = true;
-            GameOver = 1f;
-            Time.timeScale = 0;
-            MenuSelector();         
-        }*/
+            active = !active;
+            ContinueText.text = ("Press Space To continue");
+            canvas.enabled = active;
+            // Codes.enabled = active;
+            ExitText.enabled = false;
+            // Time.timeScale = 0;
+
+            if (this.active) GameManager.instance.PauseGame();
+            else GameManager.instance.UnpauseGame();
+
+        }
+
+        /* Método para el Game Over
+        if (ShotDown.hp == 0|| CameraOut)
+         {
+
+             PanelText.text = ("Game Over");
+             ContinueText.text = ("Continue");
+             ExitText.enabled = true;
+             Arrow.enabled = true;
+             canvas.enabled = true;
+             shotdown = true;
+             GameOver = 1f;
+             Time.timeScale = 0;
+             MenuSelector();         
+         }*/
 
         void Predetermined()
         {
@@ -111,6 +114,6 @@ public class Pause : MonoBehaviour
 
         }
     }
-    }
+}
 
 
