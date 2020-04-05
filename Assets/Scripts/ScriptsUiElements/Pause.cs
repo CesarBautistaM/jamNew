@@ -33,10 +33,10 @@ public class Pause : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("return"))
         {
             active = !active;
-            ContinueText.text = ("Press Space To continue");
+            ContinueText.text = ("Press Enter To continue");
             canvas.enabled = active;
             ExitText.enabled = false;
             if (this.active) GameManager.instance.PauseGame();
@@ -61,7 +61,7 @@ public class Pause : MonoBehaviour
         {
             Arrow.enabled = false;
             PanelText.text = ("Pause");
-            ContinueText.text = ("Press Space To continue");
+            ContinueText.text = ("Press Enter To continue");
             canvas.enabled = false;
             ExitText.enabled = false;
             Time.timeScale = 1;
