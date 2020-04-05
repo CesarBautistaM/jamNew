@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6367971004087724315}
   - component: {fileID: 6367971004087724313}
   - component: {fileID: 6367971004087724314}
+  - component: {fileID: 4179198864755063711}
   m_Layer: 11
   m_Name: LeftHand
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb4f17ae4258534c96d93f25c7a4e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4179198864755063711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367971004087724317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.22, y: 6.08, z: 0}
+  m_Center: {x: 0, y: 21.39, z: -0.0000076293945}
 --- !u!1 &6367971004124197690
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +140,7 @@ GameObject:
   - component: {fileID: 6367971004124197691}
   - component: {fileID: 6367971004124197689}
   - component: {fileID: 6367971004124197574}
+  - component: {fileID: 7372461860704119557}
   m_Layer: 11
   m_Name: RigthHand
   m_TagString: Untagged
@@ -228,6 +243,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &7372461860704119557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367971004124197690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.59, y: 6.62, z: 0}
+  m_Center: {x: 0, y: 21.23, z: 0.0000076293945}
 --- !u!1 &6367971004623499241
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6367971004623499254}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PrefabPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
