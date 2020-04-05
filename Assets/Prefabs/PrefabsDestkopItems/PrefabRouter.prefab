@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8427347103623652675}
   - component: {fileID: 3435298792992992733}
   - component: {fileID: 4539007816701397613}
+  - component: {fileID: 3295813751536585030}
   m_Layer: 8
   m_Name: PrefabRouter
   m_TagString: Untagged
@@ -110,8 +111,21 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427347103623652672}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.87, z: 22.7}
+  m_Center: {x: 0, y: -0.56, z: -11.4}
+--- !u!65 &3295813751536585030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427347103623652672}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8166795, y: 0.8759737, z: 0}
-  m_Center: {x: 0.007051179, y: -0.55701256, z: 0}
+  m_Size: {x: 3, y: 0.87, z: 0}
+  m_Center: {x: 0, y: -0.56, z: 0}
