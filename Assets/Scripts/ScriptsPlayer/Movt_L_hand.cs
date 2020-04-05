@@ -16,7 +16,7 @@ public class Movt_L_hand : MonoBehaviour
 // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false)
+        if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
         {
             PressKey = Input.anyKeyDown;
 
