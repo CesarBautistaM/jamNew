@@ -9,7 +9,7 @@ public class click : MonoBehaviour
     
     void Start()
     {
-        GameObject.Find("cmd").GetComponent<SpriteRenderer>().enabled = false;
+        
         cmdOpen = false;
     }
 
@@ -24,7 +24,9 @@ public class click : MonoBehaviour
         {
             if (icono.gameObject.name.Equals("SprIcon_Job"))
             {
-                GameObject.Find("cmd").GetComponent<SpriteRenderer>().enabled = true;
+                job_bar.activo = true;
+                cmd.activo = true;
+
             }
         }
         
