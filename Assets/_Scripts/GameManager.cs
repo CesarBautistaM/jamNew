@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = (this._isGamePause) ? 0 : 1;
     }
 
-    //Change the current scene to the given scene number
+    //Change the current scene to the given scene
     public void SetScene(GameScenesEnum scene)
     {
         this._sceneChanger.SetScene((int)scene);
