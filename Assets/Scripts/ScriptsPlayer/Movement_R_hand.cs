@@ -61,17 +61,12 @@ public class Movement_R_hand : MonoBehaviour
            
             Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
             Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
+            click.enMouse = true;
 
-            
+
                 if (Input.GetMouseButton(0) == true)
                 {
-                    if (Input.GetMouseButtonDown(0) == true)
-                    {
-                        if (posicionPuntero.x > -335)
-                        {
-                            Debug.Log("abrio");
-                        }
-                    }
+                
                     if (transform.position.x > -70 && transform.position.x < 50 && transform.position.y < -215 && transform.position.y > -280)
                     {
                         
@@ -83,8 +78,12 @@ public class Movement_R_hand : MonoBehaviour
                         GameObject.Find("Puntero").GetComponent<Transform>().position = posicionPuntero;
                     }
                 }
-            
 
+
+        }
+        else
+        {
+            click.enMouse = false;
         }
         
 
