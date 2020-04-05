@@ -19,7 +19,7 @@ public class Movt_L_hand : MonoBehaviour
         if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
         {
             PressKey = Input.anyKeyDown;
-
+            job_bar.trabajando = 0.1f;
             anim.SetBool("PressKey", PressKey);
         }
        

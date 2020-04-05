@@ -30,11 +30,13 @@ public class Movement_R_hand : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
                 {
                     anim.SetBool("PressKey", true);
+                    job_bar.trabajando = 0.2f;
                 }
             }
             else
             {
                 anim.SetBool("PressKey", false);
+                
             }
         }
         else
@@ -75,7 +77,7 @@ public class Movement_R_hand : MonoBehaviour
                         
                         posicionMouse.x = transform.position.x;
                         posicionMouse.y = transform.position.y + 250;
-                        posicionPuntero.x = posicionMouse.x * 2 - 250;
+                        posicionPuntero.x = posicionMouse.x * 2.5f - 240;
                         posicionPuntero.y = posicionMouse.y * (3) + 270;
                         colicion.GetComponent<Transform>().position = posicionMouse;
                         GameObject.Find("Puntero").GetComponent<Transform>().position = posicionPuntero;
