@@ -47,6 +47,8 @@ public class Movement_R_hand : MonoBehaviour
         mousePosition.y = mousePosition.y - Camera.main.pixelHeight / 2;
         mousePosition.z = transform.position.z;
         transform.position = mousePosition;
+
+        
     }
 
    
@@ -58,20 +60,30 @@ public class Movement_R_hand : MonoBehaviour
         {
            
             Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
-            if (Input.GetMouseButton(0) == true)
-            {
-                
-                if (transform.position.x > -70 && transform.position.x < 50 && transform.position.y < -215 && transform.position.y > -280)
+            Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
+
+            
+                if (Input.GetMouseButton(0) == true)
                 {
-                    Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
-                    posicionMouse.x = transform.position.x;
-                    posicionMouse.y = transform.position.y + 250;
-                    posicionPuntero.x = posicionMouse.x*2 - 250;
-                    posicionPuntero.y = posicionMouse.y *(3)+ 270;
-                    colicion.GetComponent<Transform>().position = posicionMouse;
-                    GameObject.Find("Puntero").GetComponent<Transform>().position = posicionPuntero;
+                    if (Input.GetMouseButtonDown(0) == true)
+                    {
+                        if (posicionPuntero.x > -335)
+                        {
+                            Debug.Log("abrio");
+                        }
+                    }
+                    if (transform.position.x > -70 && transform.position.x < 50 && transform.position.y < -215 && transform.position.y > -280)
+                    {
+                        
+                        posicionMouse.x = transform.position.x;
+                        posicionMouse.y = transform.position.y + 250;
+                        posicionPuntero.x = posicionMouse.x * 2 - 250;
+                        posicionPuntero.y = posicionMouse.y * (3) + 270;
+                        colicion.GetComponent<Transform>().position = posicionMouse;
+                        GameObject.Find("Puntero").GetComponent<Transform>().position = posicionPuntero;
+                    }
                 }
-            }
+            
 
         }
         
