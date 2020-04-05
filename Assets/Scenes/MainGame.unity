@@ -317,6 +317,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17d0753d9241a541a21760481ead71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingMoney: 0
+  startingEnergy: 100
+  startingWaterBillCost: 100
+  startingGasBillCost: 100
+  startingElectricityBillCost: 100
+  startingInternetBillCost: 100
 --- !u!114 &198897272
 MonoBehaviour:
   m_ObjectHideFlags: 0
