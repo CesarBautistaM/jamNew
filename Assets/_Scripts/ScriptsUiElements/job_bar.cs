@@ -49,7 +49,7 @@ public class job_bar : MonoBehaviour
         {
             
             GameManager.dinero = GameManager.dinero + paga;
-            
+            GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
             //se setea activo para que deje de mostrar la barra de progreso
             activo = false;
             //se setea el cmd.cd para que deje de mostrar la consola
