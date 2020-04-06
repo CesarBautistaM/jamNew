@@ -15,10 +15,11 @@ public class InGameTimer : MonoBehaviour
 
     #region Inspector Variables
 
-    [SerializeField] private Text clockDisplay;
+    [SerializeField] private TextMesh dayDisplay;
+    [SerializeField] private TextMesh clockDisplay;
     [SerializeField] private int timePassIncrements = 10;
-    // [SerializeField] private int startingDay = 1;
 
+    // [SerializeField] private int startingDay = 1;
 
     // [Range(0, 23)]
     // [SerializeField] private int startingHour = 6;
@@ -95,9 +96,15 @@ public class InGameTimer : MonoBehaviour
         UpdateClockDisplay();
     }
 
+    private void UpdateDayDisplay()
+    {
+
+        dayDisplay.text = string.Format("{0:D2}", this._currentIngameDateTime.Day);
+    }
+
     private void UpdateClockDisplay()
     {
-        clockDisplay.text = string.Format("{2:D2} | {0:D2} : {1:D2}", this._currentIngameDateTime.Hour, this._currentIngameDateTime.Minute, this._currentIngameDateTime.Day);
+        clockDisplay.text = string.Format("{0:D2} : {1:D2}", this._currentIngameDateTime.Hour, this._currentIngameDateTime.Minute);
     }
 
     private void TickTimer()
