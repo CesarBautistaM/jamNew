@@ -28,6 +28,13 @@ public class click : MonoBehaviour
                 cmd.activo = true;
 
             }
+            if (icono.gameObject.name.Equals("SprIcon_avast"))
+            {
+                if (GameObject.Find("Sonido_avast").GetComponent<AudioSource>().isPlaying == false)
+                {
+                    GameObject.Find("Sonido_avast").GetComponent<AudioSource>().Play();
+                }
+            }
         }
         
     }
