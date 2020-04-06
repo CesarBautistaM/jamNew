@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dinero = 1.99;
+        Teclado.nivel++;
+        dinero = 100;
         this._sceneChanger = this.GetComponent<SceneChanger>();   // Grab the scene changer that MUST be attached to the game manager object since
                                                                   // it's a requeires component
     }
@@ -76,7 +77,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        dinero = Math.Round(dinero, 2);
     }
 
 

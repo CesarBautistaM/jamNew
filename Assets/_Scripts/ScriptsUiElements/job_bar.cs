@@ -10,9 +10,10 @@ public class job_bar : MonoBehaviour
     public static float trabajando { get; set; }
     public static bool activo { get; set; }
     public static double paga { get; set; }
+    public static float bug { get; set; }
     void Start()
     {
-        
+        bug = 0;
         //se oculta la barra de progreso del trabajo
         GameObject.Find("Job").GetComponent<RawImage>().enabled = false;
         GameObject.Find("Job_bar").GetComponent<RawImage>().enabled = false;
@@ -34,7 +35,7 @@ public class job_bar : MonoBehaviour
             {
                 //se le resta al trabajo (variable local) el trabajando, que esta la cambia 2 scripts el de la mano derecha o izquierda y cada una le da un valor (si es la mano izquierda
                 //le da un valor de 0.1 y si es la derecha le da 0.2 ya que si trabaja con las dos manos es mas eficiente
-                trabajo = trabajo - trabajando;
+                trabajo = trabajo - trabajando - bug;
                 //se setea la barra para que se vaya completando
                 rectTransform.sizeDelta = new Vector2(100f, trabajo);
             }
