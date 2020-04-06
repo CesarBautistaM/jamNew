@@ -23,6 +23,10 @@ public class Movement_R_hand : MonoBehaviour
         //Se verifica que tiene energia
         if (energia == true)
         {
+            if (Input.GetMouseButtonDown(0) == true)
+            {
+                GameObject.Find("MouseClick").GetComponent<AudioSource>().Play();
+            }
             //Se verifica se encuentra en las cordenadas donde esta el teclado
             if (transform.position.x > -293 && transform.position.x < -143 && transform.position.y > -270 && transform.position.y < -127)
             {
