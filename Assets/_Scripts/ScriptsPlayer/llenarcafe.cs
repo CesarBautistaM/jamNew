@@ -113,6 +113,7 @@ public class llenarcafe : MonoBehaviour
                     llenar = false;
                     transicion = false;
                     contador = 0;
+                    GameManager.dinero = GameManager.dinero - 1.99;
                 }
             }
 

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2988683659941548393}
   - component: {fileID: 2988683659941548392}
-  - component: {fileID: 5805770142348676499}
   - component: {fileID: 6593434345852383169}
   m_Layer: 8
   m_Name: Nescafe_lleno
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &5805770142348676499
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2988683659941548311}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.48591, y: 4.6872225, z: 0.2}
-  m_Center: {x: 0.2570448, y: 0.5140972, z: 0}
 --- !u!95 &6593434345852383169
 Animator:
   serializedVersion: 3
@@ -209,7 +195,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4d20733ac64a9dd4d803febd86a84c4a, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4280624608
+    rgba: 255
 --- !u!1 &6757788924139667647
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7563484349988429077}
   - component: {fileID: 4811686414403707353}
-  - component: {fileID: 3644962304728482645}
   - component: {fileID: 8605715685954049551}
   m_Layer: 8
   m_Name: Nescafe_vacio
@@ -387,19 +372,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &3644962304728482645
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8869845640636934285}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.48591, y: 4.6872225, z: 0.2}
-  m_Center: {x: 0.2570448, y: 0.5140972, z: 0}
 --- !u!95 &8605715685954049551
 Animator:
   serializedVersion: 3

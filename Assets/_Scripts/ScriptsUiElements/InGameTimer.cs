@@ -51,6 +51,7 @@ public class InGameTimer : MonoBehaviour
             // Increase the timer by 3
             IncreaseTimerHours(3);
         }
+        
 
     }
 
