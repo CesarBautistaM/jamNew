@@ -11,9 +11,7 @@ public class energia : MonoBehaviour
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        //se le dice a la mano derecha y izquerda que tiene energia
-        Movt_L_hand.energia = true;
-        Movement_R_hand.energia = true;
+       
     }
 
     // Update is called once per frame
@@ -22,6 +20,9 @@ public class energia : MonoBehaviour
         //si tiene energia
         if (energy > 0)
         {
+            //se le dice a la mano derecha y izquerda que tiene energia
+            Movt_L_hand.energia = true;
+            Movement_R_hand.energia = true;
             //y oprime alguna tecla del teclado
             if (Input.anyKeyDown == true)
             {
