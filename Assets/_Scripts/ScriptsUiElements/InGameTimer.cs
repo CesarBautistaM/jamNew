@@ -116,6 +116,7 @@ public class InGameTimer : MonoBehaviour
 
     private void IncreaseTimerHours(int times = 1)
     {
+        this._currentIngameDateTime = this._currentIngameDateTime.AddHours(1 * times);
         // Increase Hours
         // this._currentHour = HelpMethods.WrapNumber(0, 24, this._currentHour + 1 * times);
         // if (this._currentHour > HelpMethods.WrapNumber(0, 59, this._currentHour + 1 * times))
