@@ -51,12 +51,12 @@ public class llenarcafe : MonoBehaviour
                 
                 color.a = color.a - 0.005f;
                 GameObject.Find("Negro").GetComponent<RawImage>().color = color;
-                Debug.Log(color.a);
+               
 
             }
             if (color.a < 0 && transicion == true && contador >= 0 && contador <= 1170)
             {
-                Debug.Log(contador);
+               
                 GameObject.Find("cafetera").GetComponent<Animator>().SetBool("Servir", true);
                 contador = contador + 1;
                 if (contador >= 1000)
@@ -72,7 +72,7 @@ public class llenarcafe : MonoBehaviour
                     GameObject.Find("cafetera").GetComponent<Animator>().speed = 1;
                     transicion = false;
                     energia.energy = 100f;
-                    Debug.Log("SALIO");
+                   
                     contador++;
                 }
             }
@@ -108,11 +108,12 @@ public class llenarcafe : MonoBehaviour
 
                     color.a = color.a - 0.005f;
                     GameObject.Find("Negro").GetComponent<RawImage>().color = color;
-                    Debug.Log(color.a);
+                   
                     energia.cafe = false;
                     llenar = false;
                     transicion = false;
                     contador = 0;
+                    GameManager.dinero = GameManager.dinero - 1.99;
                 }
             }
 

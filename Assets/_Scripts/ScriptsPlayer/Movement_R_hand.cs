@@ -89,7 +89,11 @@ public class Movement_R_hand : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0) == true)
                 {
-                    llenarcafe.llenar = true;
+                    if (GameManager.dinero >= 1.99)
+                    {
+                        
+                        llenarcafe.llenar = true;
+                    }
 
                 }
             }
