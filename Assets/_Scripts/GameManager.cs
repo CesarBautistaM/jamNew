@@ -12,7 +12,9 @@ using UnityEngine;
 [RequireComponent(typeof(SceneChanger))]
 public class GameManager : MonoBehaviour
 {
-
+    public static double dinero { get; set; }
+    public static int nivel { get; set; }
+    
     public static GameManager instance = null;
 
     #region Inspector Variables
