@@ -12,6 +12,6 @@ public class HelpMethods
     // Useful to keep time tracking variables between clock ranges (0 to 59 mins, 0 to 24 hours, etc)
     public static int WrapNumber(int minVal, int maxVal, int val)
     {
-        return minVal + (val - minVal) % (maxVal - minVal);
+        return (minVal + (val - minVal) % (maxVal - minVal));
     }
 }
