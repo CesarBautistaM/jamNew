@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Money : MonoBehaviour
+public class Day : MonoBehaviour
 {
     public TextMesh textmesh;
 
-    public int money=350;
+    public int day=1;
 
     void Start()
     {
@@ -19,16 +19,16 @@ public class Money : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        money++;
+        day++;
 
-        textmesh.text = ("$"+money.ToString());
+        textmesh.text = (day.ToString());
         
        
          }
 
         void Predetermined()
         {
-        textmesh.text = ("350");       
+        textmesh.text = ("1");       
         }
 
 
