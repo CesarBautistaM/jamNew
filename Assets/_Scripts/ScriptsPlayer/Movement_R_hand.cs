@@ -44,7 +44,6 @@ public class Movement_R_hand : MonoBehaviour
                         anim.SetBool("PressKey", true);
                         //se llama al job_bar.cs y se setea la variable trabajo esta es la que por cada click en el mouse cuanto se va a sumar para que aumente (este se encuentra en el canvas job)
                         job_bar.trabajando = 0.2f;
-                        
                     }
                 }
                 //si no oprime ninguna tecla se setea el animador en falso para que deje de hacer la animacion
@@ -98,20 +97,6 @@ public class Movement_R_hand : MonoBehaviour
                     {
                         
                         llenarcafe.llenar = true;
-                    }
-
-                }
-            }
-
-
-            if (colicion.gameObject.name.Equals("Precio_limpiador"))
-            {
-                if (Input.GetMouseButtonDown(0) == true)
-                {
-                    if (GameManager.dinero >= 5.9)
-                    {
-                        GameManager.dinero = GameManager.dinero - 5.9;
-                        Teclado.limpiador = true;
                     }
 
                 }
