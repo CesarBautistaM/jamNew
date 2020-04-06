@@ -31,6 +31,10 @@ public class InGameTimer : MonoBehaviour
     private int _currentHour;
     private int _currentMinute;
 
+    public int CurrentDay { get => _currentDay; }
+    public int CurrentHour { get => _currentHour; }
+    public int CurrentMinute { get => _currentMinute; }
+
     #endregion
 
     // Start is called before the first frame update
