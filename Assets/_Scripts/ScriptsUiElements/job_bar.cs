@@ -12,6 +12,7 @@ public class job_bar : MonoBehaviour
     public static double paga { get; set; }
     void Start()
     {
+        
         //se oculta la barra de progreso del trabajo
         GameObject.Find("Job").GetComponent<RawImage>().enabled = false;
         GameObject.Find("Job_bar").GetComponent<RawImage>().enabled = false;
@@ -21,6 +22,7 @@ public class job_bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //se le da para que se setee con la variable activo que la cambia el click
         GameObject.Find("Job").GetComponent<RawImage>().enabled = activo;
         GameObject.Find("Job_bar").GetComponent<RawImage>().enabled = activo;
@@ -44,6 +46,9 @@ public class job_bar : MonoBehaviour
     {   //si verifica si ya realizo todo el tranbajo aqui se da la recompenza al jugador por eso la variable publica paga
         if (trabajo < 0)
         {
+            
+            GameManager.dinero = GameManager.dinero + paga;
+            
             //se setea activo para que deje de mostrar la barra de progreso
             activo = false;
             //se setea el cmd.cd para que deje de mostrar la consola

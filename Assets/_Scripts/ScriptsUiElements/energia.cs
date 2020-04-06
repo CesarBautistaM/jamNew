@@ -54,7 +54,7 @@ public class energia : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
                     {
                         //se le resta energia por cada vez que toca una tecla del teclado en este caso le deje 1 solo para testear
-                        energy = energy - 1f;
+                        energy = energy - 0.05f;
                         //se baja la barra de energia
                         rectTransform.sizeDelta = new Vector2(100f, energy);
                     }

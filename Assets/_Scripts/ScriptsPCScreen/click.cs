@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,11 +26,33 @@ public class click : MonoBehaviour
             //se verifica si oprimio el icono de trabajo
             if (icono.gameObject.name.Equals("SprIcon_Job"))
             {
-                //setea al job_bar.cs para que se muestre en el juego
-                job_bar.activo = true;
-                //setea al cmd.cs para que se muestre en el juego y pueda empezar a programar
-                cmd.activo = true;
+                if (job_bar.activo == false)
+                {
+                    cmd.activo = true;
 
+                    //setea al job_bar.cs para que se muestre en el juego
+                    job_bar.activo = true;
+                    System.Random rnd = new System.Random();
+
+                    job_bar.paga = Math.Round(rnd.NextDouble()*10, 2);
+
+
+                    //setea al cmd.cs para que se muestre en el juego y pueda empezar a programar
+                }
+                else
+                {
+                    
+                        if (job_bar.paga > 1.8 && job_bar.paga < 4)
+                        {
+                            
+                        }
+                        else
+                        {
+                            System.Random rnd = new System.Random();
+                            job_bar.paga = Math.Round(rnd.NextDouble() * 10, 2);
+                    }
+                }
+              
             }
             //se verifica si oprimio el icono de avast
             if (icono.gameObject.name.Equals("SprIcon_avast"))
@@ -43,5 +66,10 @@ public class click : MonoBehaviour
             }
         }
         
+    }
+
+    private double GetRandomNumber(double v1, double v2)
+    {
+        throw new NotImplementedException();
     }
 }
