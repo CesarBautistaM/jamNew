@@ -8,18 +8,21 @@ public class energia : MonoBehaviour
     private RectTransform rectTransform;
     private bool bostezo, roncando;
 
+    public bool Bostezo { get => bostezo; }
+    public bool Roncando { get => roncando; }
+
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector4 color = GameObject.Find("Negro").GetComponent<RawImage>().color;
-        
+
         //si tiene energia
         if (energy > 0)
         {
@@ -58,20 +61,20 @@ public class energia : MonoBehaviour
                 //y se repoduce el sonido de bostezo
                 GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().Play();
                 bostezo = true;
-                
-                
+
+
             }
-            
-            if(GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == false)
+
+            if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == false)
             {
                 //cuando acabe el bostezo se reproduce los ronquios
                 GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().Play();
                 roncando = true;
-               
+
 
             }
-            
-            if(GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == true && bostezo == true)
+
+            if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == true && bostezo == true)
             {
                 //despues de dormir se le da 5 de enrgia para que recarge en la cafeteria el cafe o si no se dormira de nuevo la idea es que mientras duerme pierda mucho tiempo
                 bostezo = false;
@@ -80,6 +83,6 @@ public class energia : MonoBehaviour
                 rectTransform.sizeDelta = new Vector2(100f, energy);
             }
         }
-        }
-    
+    }
+
 }
