@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class texto : MonoBehaviour
 {
-    private Color colortexto = GameObject.Find("Texto_cafe").GetComponent<TextMesh>().color;
+    private Color colortexto;
     // Start is called before the first frame update
     void Start()
     {
+        colortexto = GameObject.Find("Texto_cafe").GetComponent<TextMesh>().color;
         colortexto.a = 0;
     }
 
@@ -34,7 +35,7 @@ public class texto : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         colortexto.a = 1;
-        
+
     }
     private void OnTriggerExit(Collider other)
     {

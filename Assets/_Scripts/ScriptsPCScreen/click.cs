@@ -1,8 +1,4 @@
-﻿/*
-Author: Cesar Andres Bautista Mora
-Description:  Seleccion de los iconos del escritorio
-*/
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

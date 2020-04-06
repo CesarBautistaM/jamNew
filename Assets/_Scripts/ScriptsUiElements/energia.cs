@@ -39,7 +39,7 @@ public class energia : MonoBehaviour
             //si tiene energia
             if (energy > 0)
             {
-                
+
                 if (color.w > 0)
                 {
                     color.w = color.w - 0.01f;
