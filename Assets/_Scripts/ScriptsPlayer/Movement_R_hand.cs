@@ -10,13 +10,13 @@ public class Movement_R_hand : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void FixedUpdate()
     {
@@ -46,9 +46,9 @@ public class Movement_R_hand : MonoBehaviour
                 else
                 {
                     anim.SetBool("PressKey", false);
-                
+
+                }
             }
-        }
             //si no se encuentra en la posicion del teclado se setea el animador en falso para que deje de hacer la animacion
             else
             {
@@ -70,7 +70,7 @@ public class Movement_R_hand : MonoBehaviour
         {
             anim.SetBool("PressKey", false);
         }
-        
+
     }
 
     private void OnTriggerExit(Collider colicion)
@@ -83,40 +83,26 @@ public class Movement_R_hand : MonoBehaviour
     }
     private void OnTriggerStay(Collider colicion)
     {
-        if (colicion.gameObject.name.Equals("MugNescafe"))
+        if (energia == true)
         {
-            if (Input.GetMouseButtonDown(0) == true)
+            if (colicion.gameObject.name.Equals("MugNescafe"))
             {
-                Vector4 color = GameObject.Find("Negro").GetComponent<RawImage>().color;
-                while (color.w <= 1)
+                if (Input.GetMouseButtonDown(0) == true)
                 {
-                    color.w = color.w + 0.001f;
-                    GameObject.Find("Negro").GetComponent<RawImage>().color = color;
-                }
-                Vector3 posCamera = GameObject.Find("Main Camera").GetComponent<Transform>().position;
-                posCamera.x = 3050;
-                GameObject.Find("Main Camera").GetComponent<Transform>().position = posCamera;
-                GameObject.Find("cafetera").GetComponent<Animator>().SetBool("Servir", true);
-                float tiempoAnimacion = 0f;
-                while (tiempoAnimacion < 2800f)
-                {
-                    //Debug.Log("esperando animacion");
-                    tiempoAnimacion = tiempoAnimacion + 1f;
-                }
-                Debug.Log("animacion termindad");
+                    llenarcafe.llenar = true;
 
+                }
             }
-        }
-        
-        //se verifica que este colicionando con el mouse
-        if (colicion.gameObject.name.Equals("Mouse"))
-        {
-            //se setea el enMouse del click.cs (GameObject/Puntero) para que sepa que no estamos tocando el mouse y asi solo si tocamos el mouse y damos click ejecuta los iconos 
-            click.enMouse = true;
-            //Se obtiene la posicion de tanto el mouse como el puntero
-            Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
-            Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
-            
+
+            //se verifica que este colicionando con el mouse
+            if (colicion.gameObject.name.Equals("Mouse"))
+            {
+                //se setea el enMouse del click.cs (GameObject/Puntero) para que sepa que no estamos tocando el mouse y asi solo si tocamos el mouse y damos click ejecuta los iconos 
+                click.enMouse = true;
+                //Se obtiene la posicion de tanto el mouse como el puntero
+                Vector3 posicionMouse = colicion.GetComponent<Transform>().position;
+                Vector3 posicionPuntero = GameObject.Find("Puntero").GetComponent<Transform>().position;
+
 
                 //Se verifica que tengamos el click izquiero oprimido para mover el mouse y el puntero
                 if (Input.GetMouseButton(0) == true)
@@ -133,7 +119,7 @@ public class Movement_R_hand : MonoBehaviour
                         posicionPuntero.x = posicionMouse.x * 2.4f - 250;
                         //se le da al puntero la misma cordenada que tiene el mouse enyx pero se multiplica para que abarque todo el monitor y se le resta el dezface
                         posicionPuntero.y = posicionMouse.y * (3) + 260;
-                        
+
                         //Se le setea el pocicion del mouse
                         colicion.GetComponent<Transform>().position = posicionMouse;
                         //Se le setea el pocicion del cursor
@@ -141,11 +127,15 @@ public class Movement_R_hand : MonoBehaviour
                     }
                 }
 
-
+            }
         }
+    }
+}
+
+ 
        
         
 
         
-    }
-}
+    
+
