@@ -8,6 +8,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InGameTimer : MonoBehaviour
 {
@@ -20,17 +21,17 @@ public class InGameTimer : MonoBehaviour
 
     // [SerializeField] private int startingDay = 1;
 
-    [Range(0, 23)]
-    [SerializeField] private int startingHour = 6;
+    // [Range(0, 23)]
+    // [SerializeField] private int startingHour = 6;
 
-    [Range(0, 59)]
-    [SerializeField] private int startingMinute = 0;
+    // [Range(0, 59)]
+    // [SerializeField] private int startingMinute = 0;
+
     [SerializeField] private DateTime startingGameDate = new DateTime(2020, 04, 01, 06, 00, 00);
 
     #endregion
 
     #region Private Variables
-
     private DateTime _currentIngameDateTime; // The current ingame date & time
 
     private bool _isClockTicking = false;
@@ -47,7 +48,6 @@ public class InGameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         InitVariables();
         // Increase the clock timers
         // if (!_isClockTicking)
@@ -59,7 +59,6 @@ public class InGameTimer : MonoBehaviour
     {
 
         // try to figure out if the player ran out of energy using @ProWarGamer's Shitty code :V
-        //@ProWarGamer Is a shit code but funcional code 
         if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && GameObject.FindObjectOfType<energia>().Roncando == true && GameObject.FindObjectOfType<energia>().Bostezo == true)
         {
             // Increase the timer by 3
