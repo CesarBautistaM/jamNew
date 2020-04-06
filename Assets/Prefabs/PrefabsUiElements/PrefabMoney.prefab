@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075207245638819602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 622, y: -316, z: -90}
-  m_LocalScale: {x: 50.928963, y: 20.761152, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,6 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c4c74614a7fc49ad5910a9c92c875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
   textmesh: {fileID: 0}
   money: 350

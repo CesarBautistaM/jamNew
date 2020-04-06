@@ -9,7 +9,7 @@ public class job_bar : MonoBehaviour
     private float trabajo = 100f;
     public static float trabajando { get; set; }
     public static bool activo { get; set; }
-
+    public static double paga { get; set; }
     void Start()
     {
 
@@ -27,6 +27,7 @@ public class job_bar : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
             {
+
                 trabajo = trabajo - trabajando;
                 rectTransform.sizeDelta = new Vector2(100f, trabajo);
             }
