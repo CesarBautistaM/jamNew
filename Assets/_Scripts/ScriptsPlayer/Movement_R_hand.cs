@@ -83,7 +83,30 @@ public class Movement_R_hand : MonoBehaviour
     }
     private void OnTriggerStay(Collider colicion)
     {
+        if (colicion.gameObject.name.Equals("MugNescafe"))
+        {
+            if (Input.GetMouseButtonDown(0) == true)
+            {
+                Vector4 color = GameObject.Find("Negro").GetComponent<RawImage>().color;
+                while (color.w <= 1)
+                {
+                    color.w = color.w + 0.001f;
+                    GameObject.Find("Negro").GetComponent<RawImage>().color = color;
+                }
+                Vector3 posCamera = GameObject.Find("Main Camera").GetComponent<Transform>().position;
+                posCamera.x = 3050;
+                GameObject.Find("Main Camera").GetComponent<Transform>().position = posCamera;
+                GameObject.Find("cafetera").GetComponent<Animator>().SetBool("Servir", true);
+                float tiempoAnimacion = 0f;
+                while (tiempoAnimacion < 2800f)
+                {
+                    //Debug.Log("esperando animacion");
+                    tiempoAnimacion = tiempoAnimacion + 1f;
+                }
+                Debug.Log("animacion termindad");
 
+            }
+        }
         
         //se verifica que este colicionando con el mouse
         if (colicion.gameObject.name.Equals("Mouse"))
