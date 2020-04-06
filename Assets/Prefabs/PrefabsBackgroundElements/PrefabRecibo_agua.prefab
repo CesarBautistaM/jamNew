@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7771158654029237002}
   - component: {fileID: 4173430982041109373}
   - component: {fileID: 5236299267444689830}
+  - component: {fileID: 881270405110885088}
+  - component: {fileID: 7067638733068377831}
   m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6167957172780063850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.54, y: 7.48, z: 0}
+  m_LocalPosition: {x: 0.02, y: 7.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8628815603914511770}
@@ -39,7 +41,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6167957172780063850}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -81,11 +83,11 @@ TextMesh:
   m_GameObject: {fileID: 6167957172780063850}
   m_Text: 'AGUA
 
-    $0.000'
+    $15.23'
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
-  m_Anchor: 3
+  m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
@@ -95,6 +97,31 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4291766566
+--- !u!65 &881270405110885088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6167957172780063850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.999641, y: 10.335983, z: 89.47011}
+  m_Center: {x: 0.09981537, y: -8.1160965, z: -44.735054}
+--- !u!114 &7067638733068377831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6167957172780063850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f73a7129a2b54dade1e0cade5de9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8628815603914511772
 GameObject:
   m_ObjectHideFlags: 0

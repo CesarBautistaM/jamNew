@@ -12,7 +12,9 @@ using UnityEngine;
 [RequireComponent(typeof(SceneChanger))]
 public class GameManager : MonoBehaviour
 {
-
+    public static double dinero { get; set; }
+    public static int nivel { get; set; }
+    
     public static GameManager instance = null;
 
     #region Inspector Variables
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dinero = 1.99;
         this._sceneChanger = this.GetComponent<SceneChanger>();   // Grab the scene changer that MUST be attached to the game manager object since
                                                                   // it's a requeires component
     }
