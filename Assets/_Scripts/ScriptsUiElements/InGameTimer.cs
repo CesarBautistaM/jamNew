@@ -40,6 +40,7 @@ public class InGameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         InitVariables();
     }
 
@@ -50,6 +51,7 @@ public class InGameTimer : MonoBehaviour
         TickTimer();
 
         // try to figure out if the player ran out of energy using @ProWarGamer's Shitty code :V
+        //@ProWarGamer Is a shit code but funcional code 
         if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && GameObject.FindObjectOfType<energia>().Roncando == true && GameObject.FindObjectOfType<energia>().Bostezo == true)
         {
             // Increase the timer by 3

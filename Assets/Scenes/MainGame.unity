@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 52255689}
   - component: {fileID: 52255688}
   m_Layer: 9
-  m_Name: basura_15
+  m_Name: limpia_teclado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,9 +367,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52255687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1237.5402, y: 5.1147766, z: 139.84361}
+  m_LocalPosition: {x: 92, y: -75, z: -169}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1819480043}
   m_Father: {fileID: 729925728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1003,6 +1004,7 @@ GameObject:
   - component: {fileID: 423892345}
   - component: {fileID: 423892344}
   - component: {fileID: 423892346}
+  - component: {fileID: 423892347}
   m_Layer: 8
   m_Name: SprIcon_Config
   m_TagString: Untagged
@@ -1088,6 +1090,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1529326, y: 2.7, z: 1.1385765}
   m_Center: {x: 0.023533583, y: 0, z: -0.0042209625}
+--- !u!114 &423892347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423892343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b317b76fbbbe144f87fb9275817472e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462332158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $10.000.000
+  m_Text: $0
 --- !u!222 &485229922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1543,8 +1557,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1999998, y: 2.6999998, z: 0.63824725}
-  m_Center: {x: 0, y: 0, z: 0.0012235666}
+  m_Size: {x: 3.1999998, y: 3.9368536, z: 0.63824725}
+  m_Center: {x: 0, y: 0.2554422, z: 0.0012235666}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,8 +3143,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1999998, y: 2.6152194, z: 0.83571655}
-  m_Center: {x: 0, y: 0.010995341, z: -0.0709848}
+  m_Size: {x: 3.0759885, y: 2.5377264, z: 0.8498634}
+  m_Center: {x: 0.06200565, y: -0.3280345, z: -0.078058146}
 --- !u!4 &1117794085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7560399784097758759, guid: 9061813f7efbe014a9a6567a53b54e03,
@@ -4504,6 +4518,128 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1819480042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819480043}
+  - component: {fileID: 1819480047}
+  - component: {fileID: 1819480046}
+  - component: {fileID: 1819480045}
+  - component: {fileID: 1819480044}
+  m_Layer: 9
+  m_Name: Precio_limpiador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819480043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819480042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4, y: 182.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 52255689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819480044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819480042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f73a7129a2b54dade1e0cade5de9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1819480045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819480042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 66.8931, y: 152.79135, z: 420.46106}
+  m_Center: {x: 3.5808258, y: -106.21913, z: -210.23053}
+--- !u!102 &1819480046
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819480042}
+  m_Text: 'LIMPIADOR
+
+    $5.9'
+  m_OffsetZ: 0
+  m_CharacterSize: 20
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 4d20733ac64a9dd4d803febd86a84c4a, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1819480047
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819480042}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4d20733ac64a9dd4d803febd86a84c4a, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1885248317
 GameObject:
   m_ObjectHideFlags: 0
