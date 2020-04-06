@@ -43,7 +43,7 @@ public class InGameTimer : MonoBehaviour
     void FixedUpdate()
     {
         // Increase the clock timers
-        StartCoroutine(TickIngameTimer());
+        TickTimer();
 
         // try to figure out if the player ran out of energy using @ProWarGamer's Shitty code :V
         if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && GameObject.FindObjectOfType<energia>().Roncando == true && GameObject.FindObjectOfType<energia>().Bostezo == true)
@@ -82,13 +82,6 @@ public class InGameTimer : MonoBehaviour
         {
             this._currentHour = HelpMethods.WrapNumber(0, 59, this._currentHour + 1 * times);
         }
-    }
-
-    // increase the ingame timer by ten seconds every 1 second
-    private IEnumerator TickIngameTimer()
-    {
-        this.TickTimer();
-        return new WaitForSecondsRealtime(1);
     }
 
     #endregion

@@ -8,37 +8,19 @@ public class energia : MonoBehaviour
     public static bool cafe { get; set; }
     private RectTransform rectTransform;
     private bool bostezo, roncando;
-<<<<<<< HEAD
     
         
-=======
-
-    public bool Bostezo { get => bostezo; }
-    public bool Roncando { get => roncando; }
-
->>>>>>> 1b3f121fc712367f33e36d0e23322cee5047c06c
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-<<<<<<< HEAD
         energy = 100f;
-=======
-
->>>>>>> 1b3f121fc712367f33e36d0e23322cee5047c06c
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if (cafe == true)
-=======
-        Vector4 color = GameObject.Find("Negro").GetComponent<RawImage>().color;
-
-        //si tiene energia
-        if (energy > 0)
->>>>>>> 1b3f121fc712367f33e36d0e23322cee5047c06c
         {
             Movt_L_hand.energia = false;
             Movement_R_hand.energia = false;
@@ -51,7 +33,6 @@ public class energia : MonoBehaviour
             //si tiene energia
             if (energy > 0)
             {
-<<<<<<< HEAD
                 if (color.w > 0)
                 {
                     color.w = color.w - 0.01f;
@@ -87,21 +68,6 @@ public class energia : MonoBehaviour
                     //y se repoduce el sonido de bostezo
                     GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().Play();
                     bostezo = true;
-=======
-                //y se repoduce el sonido de bostezo
-                GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().Play();
-                bostezo = true;
-
-
-            }
-
-            if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == false)
-            {
-                //cuando acabe el bostezo se reproduce los ronquios
-                GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().Play();
-                roncando = true;
-
->>>>>>> 1b3f121fc712367f33e36d0e23322cee5047c06c
 
 
                 }
@@ -124,21 +90,6 @@ public class energia : MonoBehaviour
                     rectTransform.sizeDelta = new Vector2(100f, energy);
                 }
             }
-<<<<<<< HEAD
         }
     }
-=======
-
-            if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && roncando == true && bostezo == true)
-            {
-                //despues de dormir se le da 5 de enrgia para que recarge en la cafeteria el cafe o si no se dormira de nuevo la idea es que mientras duerme pierda mucho tiempo
-                bostezo = false;
-                roncando = false;
-                energy = 5f;
-                rectTransform.sizeDelta = new Vector2(100f, energy);
-            }
-        }
-    }
-
->>>>>>> 1b3f121fc712367f33e36d0e23322cee5047c06c
 }
