@@ -140,5 +140,15 @@ public class GameManager : MonoBehaviour
         return new WaitForSecondsRealtime(1);
     }
 
+    public int getCurrentEnergy()
+    {
+        return this._currentEnergy;
+    }
+
+    public int getStartingEnergy()
+    {
+        return this.startingEnergy;
+    }
+
     #endregion
 }
