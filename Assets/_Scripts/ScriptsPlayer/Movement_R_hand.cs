@@ -96,9 +96,9 @@ public class Movement_R_hand : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) == true)
                 {
                     
-                    if (GameManager.dinero >= 5.9)
+                    if (GameManager.dinero >= 3.9)
                     {
-                        GameManager.dinero = GameManager.dinero - 5.9;
+                        GameManager.dinero = GameManager.dinero - 3.9;
                         teclado2.limpiador = true;
                     }
 
