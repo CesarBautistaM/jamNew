@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -234,12 +234,12 @@ PrefabInstance:
     - target: {fileID: 1075207245638819054, guid: ca7f207190f838b45a4f78be8c5567b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.95
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1075207245638819054, guid: ca7f207190f838b45a4f78be8c5567b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.58
+      value: -6.18
       objectReference: {fileID: 0}
     - target: {fileID: 1075207245638819054, guid: ca7f207190f838b45a4f78be8c5567b3,
         type: 3}
@@ -329,6 +329,11 @@ PrefabInstance:
     - target: {fileID: 1075207245638819603, guid: ca7f207190f838b45a4f78be8c5567b3,
         type: 3}
       propertyPath: m_Anchor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075207245638819603, guid: ca7f207190f838b45a4f78be8c5567b3,
+        type: 3}
+      propertyPath: m_TabSize
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
