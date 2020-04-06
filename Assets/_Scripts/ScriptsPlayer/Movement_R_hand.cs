@@ -25,7 +25,7 @@ public class Movement_R_hand : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) == true)
             {
-                GameObject.Find("MouseClick").GetComponent<AudioSource>().Play();
+                //GameObject.Find("MouseClick").GetComponent<AudioSource>().Play();
             }
             //Se verifica se encuentra en las cordenadas donde esta el teclado
             if (transform.position.x > -293 && transform.position.x < -143 && transform.position.y > -270 && transform.position.y < -127)
@@ -89,6 +89,22 @@ public class Movement_R_hand : MonoBehaviour
     {
         if (energia == true)
         {
+
+            if (colicion.gameObject.name.Equals("Precio_limpiador"))
+            {
+                
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    
+                    if (GameManager.dinero >= 5.9)
+                    {
+                        GameManager.dinero = GameManager.dinero - 5.9;
+                        teclado2.limpiador = true;
+                    }
+
+                }
+            }
+
             if (colicion.gameObject.name.Equals("MugNescafe"))
             {
                 if (Input.GetMouseButtonDown(0) == true)
