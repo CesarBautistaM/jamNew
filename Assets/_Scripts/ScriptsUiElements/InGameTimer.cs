@@ -69,9 +69,9 @@ public class InGameTimer : MonoBehaviour
         }
         if (nuevodia == true)
         {
-            //AQUIIIIIIIIIIIIIII
-            IncreaseTimerHours(2);
-            nuevodia = false;
+
+            _currentIngameDateTime = new DateTime(2020, 04, CurrentDay, 06, 00, 00);
+             nuevodia = false;
         }
 
         GameManager.dia = CurrentDay;
