@@ -69,6 +69,7 @@ public class InGameTimer : MonoBehaviour
         }
         if (nuevodia == true)
         {
+            //AQUIIIIIIIIIIIIIII
             IncreaseTimerHours(2);
             nuevodia = false;
         }
