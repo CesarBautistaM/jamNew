@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        opcion = rnd.Next(1, 3);
+                       
                     }
                 }
                 else
