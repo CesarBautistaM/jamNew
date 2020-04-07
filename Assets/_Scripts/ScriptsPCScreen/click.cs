@@ -48,7 +48,7 @@ public class click : MonoBehaviour
                 else
                 {
 
-                    if (job_bar.paga > 1.8 && job_bar.paga < 6)
+                    if (job_bar.paga > 1.8 && job_bar.paga < 5.5)
                     {
 
                     }
