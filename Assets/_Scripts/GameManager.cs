@@ -180,9 +180,7 @@ public class GameManager : MonoBehaviour
 
                 }
                
-            }
-
-           
+            }          
         
        
         }

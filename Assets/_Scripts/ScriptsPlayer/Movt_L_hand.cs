@@ -10,13 +10,22 @@ public class Movt_L_hand : MonoBehaviour
 
     public static bool energia { get; set; }
     public static bool enTeclado { get; set; }
+
+    private AudioSource _tecladoAudioSource;
+    private AudioClip _tecladoAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
-         anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+
+
+        // store the audiosource and the sound effect
+        this._tecladoAudioSource = GameObject.Find("Sound_keyboard").GetComponent<AudioSource>();
+        this._tecladoAudioClip = this._tecladoAudioSource.clip;
     }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         //se revisa que no se este oprimiendo ninguna tecla del mouse
@@ -53,7 +62,12 @@ public class Movt_L_hand : MonoBehaviour
             //y tiene energia
             if (energia == true)
             {
-                GameObject.Find("Sound_keyboard").GetComponent<AudioSource>().Play();
+
+                // GameObject.Find("Sound_keyboard").GetComponent<AudioSource>().Play();
+
+                // play the keyboard sound
+                this._tecladoAudioSource.PlayOneShot(this._tecladoAudioClip);
+
                 //se obtiene su posicion 
                 Vector3 position = transform.position;
                 //se setean los limites en que se va a mover
