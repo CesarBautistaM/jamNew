@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     {
        
         diahoy = 1;
-        dinero = 6.0;
+        dinero = 20.69;
         this._sceneChanger = this.GetComponent<SceneChanger>();   // Grab the scene changer that MUST be attached to the game manager object since
         
             horadeactualizacion = 0;
