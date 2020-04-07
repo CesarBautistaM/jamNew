@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
     private bool transicion;
     private bool b,r;
     private int horadeactualizacion;
-    private System.Random rnd = new System.Random();
+    private int tiempo;
+     
     #region Inspector Variables
 
     [SerializeField] private int startingMoney = 0;
@@ -85,15 +86,18 @@ public class GameManager : MonoBehaviour
         this._sceneChanger = this.GetComponent<SceneChanger>();   // Grab the scene changer that MUST be attached to the game manager object since
         
             horadeactualizacion = 0;
-            numeroerrores = rnd.Next(2, 7);
+            System.Random rand = new System.Random();
+            numeroerrores = rand.Next(2, 7);
             errorcada = (15 / numeroerrores);
             horadelerror = errorcada + 6;
             diahoy++;
         transicion = false;
+        tiempo = 900;
                                                // it's a requeires component
     }
 
     // Update is called once per frame
+    
     void Update()
     {
 
@@ -115,7 +119,11 @@ public class GameManager : MonoBehaviour
         }
         if(router.bug == true && dinero < 5.9)
         {
-            SceneManager.LoadScene(4);
+            tiempo--;
+            if (tiempo == 0)
+            {
+                SceneManager.LoadScene(4);
+            }
         }
         if (diahoy == dia)
         {
@@ -157,21 +165,22 @@ public class GameManager : MonoBehaviour
                     GameObject.Find("RadioFondo").GetComponent<AudioSource>().Pause();
                     b = false;
                     r = true;
+                    transicion = false;
                     InGameTimer.nuevodia = true;
                     color.a = color.a - 0.001f;
                     energia.cafe = false;
                     horadeactualizacion = 0;
+                    System.Random rnd = new System.Random();
                     numeroerrores = rnd.Next(2, 7);
                     errorcada = (15 / numeroerrores);
                     horadelerror = errorcada + 6;
                     diahoy++;
                     energia.energy = 100f;
 
+
                 }
                
-            }
-
-           
+            }          
         
        
         }
@@ -188,7 +197,9 @@ public class GameManager : MonoBehaviour
         if(horadelerror == hora)
         {
             GameObject.Find("ErrorSoundIndicator").GetComponent<AudioSource>().Play();
+            System.Random rnd = new System.Random();
             int opcion = rnd.Next(1, 4);
+            
             if (opcion == 3)
             {
                 if (hora < (horadeactualizacion + 3))

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 
 public class Virus : MonoBehaviour
 {
@@ -23,10 +23,17 @@ public class Virus : MonoBehaviour
         {
             if (informado == false)
             {
-                this.GetComponent<AudioSource>().Play();
-
-
                 informado = true;
+                var tempAudioSource = this.GetComponent<AudioSource>();
+                var tempAudioclip = tempAudioSource.clip;
+
+                // play the keyboard sound
+                tempAudioSource.PlayOneShot(tempAudioclip);
+
+
+
+
+
                 if (job_bar.activo == true)
                 {
                     if ((job_bar.trabajo + 25) <= 100)
@@ -45,7 +52,7 @@ public class Virus : MonoBehaviour
                 {
                     job_bar.trabajo = job_bar.trabajo + 0.1f;
                 }
-                
+
             }
         }
         else
