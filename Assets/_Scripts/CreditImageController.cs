@@ -10,7 +10,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CreditImageController : MonoBehaviour, IPointerClickHandler
+
+[RequireComponent(typeof(Outline))]
+public class CreditImageController : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     #region Inspector Variables
@@ -24,8 +26,28 @@ public class CreditImageController : MonoBehaviour, IPointerClickHandler
 
     #region Private Variables
 
+    private Outline _portraitHighligth;
+
     #endregion
 
+    void Start()
+    {
+        _portraitHighligth = this.gameObject.GetComponent<Outline>();
+        _portraitHighligth.enabled = (false);
+    }
+
+
+    void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
+    {
+        _portraitHighligth.enabled = (false);
+
+    }
+
+    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+    {
+        _portraitHighligth.enabled = (true);
+
+    }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {

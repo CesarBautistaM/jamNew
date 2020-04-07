@@ -224,6 +224,8 @@ GameObject:
   - component: {fileID: 258090237}
   - component: {fileID: 258090239}
   - component: {fileID: 258090238}
+  - component: {fileID: 258090241}
+  - component: {fileID: 258090240}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -286,6 +288,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258090236}
   m_CullTransparentMesh: 0
+--- !u!114 &258090240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258090236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68edcd1d8c5a96e4780bfcf105d4d207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hiddenContent: {fileID: 0}
+  creditsInfoDisplay: {fileID: 1099357499}
+  nombreCredits: Juan Pablo
+  rolCredits: Master of housekeeping and cleaning
+--- !u!114 &258090241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258090236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.032458067, a: 0.21176471}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &388876061
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +330,6 @@ GameObject:
   - component: {fileID: 388876062}
   - component: {fileID: 388876064}
   - component: {fileID: 388876063}
-  - component: {fileID: 388876065}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -338,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -360,22 +392,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388876061}
   m_CullTransparentMesh: 0
---- !u!114 &388876065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388876061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68edcd1d8c5a96e4780bfcf105d4d207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenContent: {fileID: 0}
-  creditsInfoDisplay: {fileID: 1099357499}
-  nombreCredits: Juan Pablo
-  rolCredits: Master of housekeeping and cleaning
 --- !u!1 &560925224
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560925224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9, y: 255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 258090237}
@@ -420,6 +436,7 @@ GameObject:
   - component: {fileID: 609374848}
   - component: {fileID: 609374847}
   - component: {fileID: 609374849}
+  - component: {fileID: 609374850}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -443,7 +460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 284.2, y: 118}
+  m_AnchoredPosition: {x: 343, y: 171}
   m_SizeDelta: {x: 302.8, y: 182.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609374847
@@ -498,6 +515,21 @@ MonoBehaviour:
   creditsInfoDisplay: {fileID: 1099357499}
   nombreCredits: Cesar Bautista
   rolCredits: hacker
+--- !u!114 &609374850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609374845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.032458067, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &744732885
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +973,7 @@ GameObject:
   - component: {fileID: 1470851101}
   - component: {fileID: 1470851100}
   - component: {fileID: 1470851102}
+  - component: {fileID: 1470851103}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -964,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 343.2, y: -65}
+  m_AnchoredPosition: {x: 245, y: -41}
   m_SizeDelta: {x: 304.6, y: 181.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470851100
@@ -1019,6 +1052,21 @@ MonoBehaviour:
   creditsInfoDisplay: {fileID: 1099357499}
   nombreCredits: Mr. Robot
   rolCredits: Supreme Leader of the DPRK
+--- !u!114 &1470851103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470851098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.032458067, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1502558685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 343.2, y: -209}
+  m_AnchoredPosition: {x: 350, y: -174}
   m_SizeDelta: {x: 270.93, y: 195.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893352965
