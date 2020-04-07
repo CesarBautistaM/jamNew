@@ -199,7 +199,7 @@ public class GameManager : MonoBehaviour
             GameObject.Find("ErrorSoundIndicator").GetComponent<AudioSource>().Play();
             System.Random rnd = new System.Random();
             int opcion = rnd.Next(1, 4);
-            opcion = 1;
+            
             if (opcion == 3)
             {
                 if (hora < (horadeactualizacion + 3))
