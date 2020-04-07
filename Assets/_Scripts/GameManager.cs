@@ -8,6 +8,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(SceneChanger))]
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
         if (GameObject.Find("textAgua").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textArriendo").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textGas").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textInternet").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textLuz").GetComponent<MeshRenderer>().enabled == false)
         {
             //GANO
-            Debug.Log("GANOOO");
+            SceneManager.LoadScene(3);
         }
         //SI ES EL DIA 31
         if (dia == 31)
@@ -109,6 +110,7 @@ public class GameManager : MonoBehaviour
             if (GameObject.Find("textAgua").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textArriendo").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textGas").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textInternet").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textLuz").GetComponent<MeshRenderer>().enabled == true)
             {
                 //PERDIO
+                SceneManager.LoadScene(4);
             }
         }
         if (diahoy == dia)
