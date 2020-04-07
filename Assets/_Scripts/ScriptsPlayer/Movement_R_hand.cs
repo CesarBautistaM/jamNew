@@ -28,7 +28,7 @@ public class Movement_R_hand : MonoBehaviour
                 //GameObject.Find("MouseClick").GetComponent<AudioSource>().Play();
             }
             //Se verifica se encuentra en las cordenadas donde esta el teclado
-            if (transform.position.x > -293 && transform.position.x < -143 && transform.position.y > -270 && transform.position.y < -127)
+            if (transform.position.x > -293 && transform.position.x < -120 && transform.position.y > -290 && transform.position.y < -200)
             {
                 //Se llama al animador y se setea la variable
                 anim.SetBool("KeyBoard", true);
