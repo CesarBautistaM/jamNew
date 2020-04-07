@@ -113,6 +113,10 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(4);
             }
         }
+        if(router.bug == true && dinero < 5.9)
+        {
+            SceneManager.LoadScene(4);
+        }
         if (diahoy == dia)
         {
             energia.cafe = true;
@@ -196,7 +200,7 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        opcion = rnd.Next(1, 3);
+                       
                     }
                 }
                 else
