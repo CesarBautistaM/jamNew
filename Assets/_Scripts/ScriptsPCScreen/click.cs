@@ -62,7 +62,7 @@ public class click : MonoBehaviour
             }
             if (icono.gameObject.name.Equals("SprIcon_Config"))
             {
-                if (GameManager.dinero >= 5.9)
+                if (GameManager.dinero >= 5.9 && router.bug == true)
                 {
                     GameManager.dinero = GameManager.dinero - 5.9;
                     router.bug = false;
