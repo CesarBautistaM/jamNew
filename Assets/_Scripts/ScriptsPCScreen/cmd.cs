@@ -13,6 +13,8 @@ public class cmd : MonoBehaviour
         anim = GetComponent<Animator>();
         //se oculta la consola de cmd
         GameObject.Find("cmd").GetComponent<SpriteRenderer>().enabled = false;
+        // activo = false;
+
     }
 
     // Update is called once per frame
@@ -34,7 +36,7 @@ public class cmd : MonoBehaviour
                     anim.speed = 2;
                 }
             }
-            
+
             else
             {
                 //si no pausa la animacion
