@@ -8,15 +8,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SceneChanger))]
 public class GameManager : MonoBehaviour
 {
     public static double dinero { get; set; }
-    public static int nivel { get; set; }
-    
+    public static int dia { get; set; }
+    public static int hora { get; set; }
+    public static int min { get; set; }
+    public static bool actualizoAvast { get; set; }
     public static GameManager instance = null;
-
+    private int diahoy;
+    private int numeroerrores;
+    private int errorcada;
+    private int horadelerror;
+    private bool transicion;
+    private bool b,r;
+    private int horadeactualizacion;
+    private System.Random rnd = new System.Random();
     #region Inspector Variables
 
     [SerializeField] private int startingMoney = 0;
@@ -68,16 +78,140 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
-        dinero = 10.99;
+       
+        diahoy = 1;
+        dinero = 0.1;
         this._sceneChanger = this.GetComponent<SceneChanger>();   // Grab the scene changer that MUST be attached to the game manager object since
-                                                                  // it's a requeires component
+        
+            horadeactualizacion = 0;
+            numeroerrores = rnd.Next(2, 7);
+            errorcada = (15 / numeroerrores);
+            horadelerror = errorcada + 6;
+            diahoy++;
+        transicion = false;
+                                               // it's a requeires component
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        //GANADOR
+        if (GameObject.Find("textAgua").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textArriendo").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textGas").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textInternet").GetComponent<MeshRenderer>().enabled == false && GameObject.Find("textLuz").GetComponent<MeshRenderer>().enabled == false)
+        {
+            //GANO
+            Debug.Log("GANOOO");
+        }
+        //SI ES EL DIA 31
+        if (dia == 31)
+        {
+            //Y NO PAGO TODO PERDIO
+            if (GameObject.Find("textAgua").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textArriendo").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textGas").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textInternet").GetComponent<MeshRenderer>().enabled == true || GameObject.Find("textLuz").GetComponent<MeshRenderer>().enabled == true)
+            {
+                //PERDIO
+            }
+        }
+        if (diahoy == dia)
+        {
+            energia.cafe = true;
+            Color color = GameObject.Find("Negro").GetComponent<RawImage>().color;
+            if (color.a < 1 && transicion == false)
+            {
+                
+                color.a = color.a + 0.005f;
+                GameObject.Find("Negro").GetComponent<RawImage>().color = color;
+                if (Math.Truncate(color.a) == 1)
+                {
+                    
+                    transicion = true;
+                    color.a = Convert.ToSingle(Math.Truncate(color.a));
+
+                }
+            }
+
+            if (transicion == true)
+            {
+                
+                if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying==false && b == false)
+                {
+                    
+                    GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().Play();
+                    GameObject.Find("RadioFondo").GetComponent<AudioSource>().Play();
+                    b = true;
+                }
+
+                if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && b == true && r==false)
+                {
+                    GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().Play();
+                    r = true;
+                   
+                }
+                if(GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && r == true)
+                {
+                    GameObject.Find("RadioFondo").GetComponent<AudioSource>().Pause();
+                    b = false;
+                    r = true;
+                    InGameTimer.nuevodia = true;
+                    color.a = color.a - 0.001f;
+                    energia.cafe = false;
+                    horadeactualizacion = 0;
+                    numeroerrores = rnd.Next(2, 7);
+                    errorcada = (15 / numeroerrores);
+                    horadelerror = errorcada + 6;
+                    diahoy++;
+                    energia.energy = 100f;
+
+                }
+               
+            }
+
+           
+        
+       
+        }
+   
+
+        if(actualizoAvast == true)
+        {
+            horadeactualizacion = hora;
+            actualizoAvast = false;
+        }
+        
+        
+        
+        if(horadelerror == hora)
+        {
+            GameObject.Find("ErrorSoundIndicator").GetComponent<AudioSource>().Play();
+            int opcion = rnd.Next(1, 4);
+            if (opcion == 3)
+            {
+                if (hora < (horadeactualizacion + 3))
+                {
+                    int virusonovirus = rnd.Next(1, 3);
+                    if (virusonovirus == 1)
+                    {
+                        Virus.infectado = true;
+                    }
+                    else
+                    {
+                        opcion = rnd.Next(1, 3);
+                    }
+                }
+                else
+                {
+                    Virus.infectado = true;
+                }
+            }
+            if (opcion == 1)
+            {
+                router.bug = true;
+            }
+            if (opcion == 2)
+            {
+                teclado2.nivel++;
+            }
+            horadelerror = horadelerror + errorcada;
+        }
         dinero = Math.Round(dinero, 2);
     }
 

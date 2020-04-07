@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class job_bar : MonoBehaviour
 {
     private RectTransform rectTransform;
-    private float trabajo = 100f;
+    public static float trabajo { get; set; }
     public static float trabajando { get; set; }
+    public static float bug { get; set; }
+    
     public static bool activo { get; set; }
     public static double paga { get; set; }
     void Start()
     {
-        
+        trabajo = 100f;
         //se oculta la barra de progreso del trabajo
         GameObject.Find("Job").GetComponent<RawImage>().enabled = false;
         GameObject.Find("Job_bar").GetComponent<RawImage>().enabled = false;
@@ -22,7 +24,7 @@ public class job_bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rectTransform.sizeDelta = new Vector2(100f, trabajo);
         //se le da para que se setee con la variable activo que la cambia el click
         GameObject.Find("Job").GetComponent<RawImage>().enabled = activo;
         GameObject.Find("Job_bar").GetComponent<RawImage>().enabled = activo;
@@ -32,11 +34,14 @@ public class job_bar : MonoBehaviour
             //se verifica que la tecla oprimida no sea ninguna del mouse
             if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
             {
-                //se le resta al trabajo (variable local) el trabajando, que esta la cambia 2 scripts el de la mano derecha o izquierda y cada una le da un valor (si es la mano izquierda
-                //le da un valor de 0.1 y si es la derecha le da 0.2 ya que si trabaja con las dos manos es mas eficiente
-                trabajo = trabajo - trabajando;
-                //se setea la barra para que se vaya completando
-                rectTransform.sizeDelta = new Vector2(100f, trabajo);
+                if (router.bug == false)
+                {
+                    //se le resta al trabajo (variable local) el trabajando, que esta la cambia 2 scripts el de la mano derecha o izquierda y cada una le da un valor (si es la mano izquierda
+                    //le da un valor de 0.1 y si es la derecha le da 0.2 ya que si trabaja con las dos manos es mas eficiente
+                    trabajo = trabajo - trabajando + bug;
+                    //se setea la barra para que se vaya completando
+                    rectTransform.sizeDelta = new Vector2(100f, trabajo);
+                }
             }
         }
     }

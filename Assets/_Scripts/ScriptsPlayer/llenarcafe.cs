@@ -26,7 +26,7 @@ public class llenarcafe : MonoBehaviour
             
             if (color.a < 1 && contador==0 && transicion == false)
             {
-                
+                energia.cafe = true;
                 color.a = color.a + 0.005f;
                 GameObject.Find("Negro").GetComponent<RawImage>().color = color;
                 if (Math.Truncate(color.a) == 1)
@@ -39,7 +39,8 @@ public class llenarcafe : MonoBehaviour
            
             if(color.a == 1 && contador == 0 && transicion == true)
             {
-                energia.cafe = true;
+                GameObject.Find("CoinSound").GetComponent<AudioSource>().Play();
+                GameObject.Find("RadioFondo").GetComponent<AudioSource>().Play();
                 Vector3 posCamera = GameObject.Find("Main Camera").GetComponent<Transform>().position;
                 posCamera.x = 3050;
                 GameObject.Find("Main Camera").GetComponent<Transform>().position = posCamera;
@@ -56,10 +57,13 @@ public class llenarcafe : MonoBehaviour
             }
             if (color.a < 0 && transicion == true && contador >= 0 && contador <= 1170)
             {
-               
+               if(contador == 150 && GameObject.Find("CoffeSound").GetComponent<AudioSource>().isPlaying == false)
+                {
+                    GameObject.Find("CoffeSound").GetComponent<AudioSource>().Play();
+                }
                 GameObject.Find("cafetera").GetComponent<Animator>().SetBool("Servir", true);
                 contador = contador + 1;
-                if (contador >= 1000)
+                if (contador >= 700)
                 {
                     contador = 1170;
                     
@@ -72,7 +76,7 @@ public class llenarcafe : MonoBehaviour
                     GameObject.Find("cafetera").GetComponent<Animator>().speed = 1;
                     transicion = false;
                     energia.energy = 100f;
-                   
+                    GameObject.Find("DinkSound").GetComponent<AudioSource>().Play();
                     contador++;
                 }
             }
@@ -94,13 +98,14 @@ public class llenarcafe : MonoBehaviour
 
                 if (color.a == 1 && transicion == true)
                 {
+                    
                     energia.cafe = true;
                     Vector3 posCamera = GameObject.Find("Main Camera").GetComponent<Transform>().position;
                     posCamera.x = -67;
                     GameObject.Find("Main Camera").GetComponent<Transform>().position = posCamera;
                     color.a = color.a - 0.001f;
                     llenar = false;
-
+                    GameObject.Find("RadioFondo").GetComponent<AudioSource>().Pause();
                 }
                 
                 if (color.a > 0 && color.a < 1 && transicion == true)

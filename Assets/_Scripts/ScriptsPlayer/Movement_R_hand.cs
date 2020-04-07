@@ -89,8 +89,61 @@ public class Movement_R_hand : MonoBehaviour
     {
         if (energia == true)
         {
+            
+                
+                if (colicion.gameObject.name.Equals("textAgua") && GameManager.dinero >= 15.23 && colicion.GetComponent<MeshRenderer>().enabled == true)
+                {
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    colicion.GetComponent<MeshRenderer>().enabled = false;
+                    GameManager.dinero = GameManager.dinero - 15.23;
+                    GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
+                }
+                }
 
-            if (colicion.gameObject.name.Equals("Precio_limpiador"))
+                if (colicion.gameObject.name.Equals("textArriendo") && GameManager.dinero >= 51.12 && colicion.GetComponent<MeshRenderer>().enabled == true)
+                {
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    
+                    colicion.GetComponent<MeshRenderer>().enabled = false;
+                    GameManager.dinero = GameManager.dinero - 51.12;
+                    GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
+                }
+                }
+
+                if (colicion.gameObject.name.Equals("textGas") && GameManager.dinero >= 5.12 && colicion.GetComponent<MeshRenderer>().enabled == true)
+                {
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    colicion.GetComponent<MeshRenderer>().enabled = false;
+                    GameManager.dinero = GameManager.dinero - 5.12;
+                    GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
+                }
+                }
+
+                if (colicion.gameObject.name.Equals("textInternet") && GameManager.dinero >= 23.12 && colicion.GetComponent<MeshRenderer>().enabled == true)
+                {
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    colicion.GetComponent<MeshRenderer>().enabled = false;
+                    GameManager.dinero = GameManager.dinero - 23.12;
+                    GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
+                }
+                }
+
+                if (colicion.gameObject.name.Equals("textLuz") && GameManager.dinero >= 42.12 && colicion.GetComponent<MeshRenderer>().enabled == true)
+                {
+                if (Input.GetMouseButtonDown(0) == true)
+                {
+                    colicion.GetComponent<MeshRenderer>().enabled = false;
+                    GameManager.dinero = GameManager.dinero - 42.12;
+                    GameObject.Find("TrabajoTerminado").GetComponent<AudioSource>().Play();
+                }
+                }
+            
+
+                if (colicion.gameObject.name.Equals("Precio_limpiador"))
             {
                 
                 if (Input.GetMouseButtonDown(0) == true)
@@ -99,7 +152,9 @@ public class Movement_R_hand : MonoBehaviour
                     if (GameManager.dinero >= 3.9)
                     {
                         GameManager.dinero = GameManager.dinero - 3.9;
+                        GameObject.Find("SonidoSpray").GetComponent<AudioSource>().Play();
                         teclado2.limpiador = true;
+                        
                     }
 
                 }
@@ -134,6 +189,7 @@ public class Movement_R_hand : MonoBehaviour
                     //se declara la zona para que el mouse no pueda salir de ahi
                     if (transform.position.x > -70 && transform.position.x < 50 && transform.position.y < -215 && transform.position.y > -280)
                     {
+
                         //se le da al mouse la misma cordenada que tiene la mano en x
                         posicionMouse.x = transform.position.x;
                         //se le da al mouse la misma cordenada que tiene la mano en y pero se le suma 250 ya que el y se toma desde la parte mas baja del brazo

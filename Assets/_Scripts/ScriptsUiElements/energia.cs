@@ -25,11 +25,11 @@ public class energia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rectTransform.sizeDelta = new Vector2(100f, energy);
         if (cafe == true) {
             Movt_L_hand.energia = false;
             Movement_R_hand.energia = false;
-            rectTransform.sizeDelta = new Vector2(100f, energy);
+            
         }
         else
         {

@@ -7,6 +7,7 @@ public class Movt_L_hand : MonoBehaviour
     private bool PressKey;
     private Animator anim;
     private int mover = 1;
+
     public static bool energia { get; set; }
     public static bool enTeclado { get; set; }
     // Start is called before the first frame update
@@ -21,9 +22,11 @@ public class Movt_L_hand : MonoBehaviour
         //se revisa que no se este oprimiendo ninguna tecla del mouse
         if (Input.GetMouseButtonDown(0) == false && Input.GetMouseButtonDown(1) == false && Input.GetMouseButtonDown(2) == false && Input.GetKeyDown("return") == false)
         {
+
             //se revisa que tenga energia
             if (energia == true)
             {
+
                 //en el caso que oprima una tecla se setea 
                 PressKey = Input.anyKeyDown;
                 //si no tiene la mano deracha en el teclado se setea el trabajo en 0.1 significa en la mitad para que relice el trabajo mas lento
@@ -46,9 +49,11 @@ public class Movt_L_hand : MonoBehaviour
         //si oprime una tecla
         if (PressKey == true)
         {
+
             //y tiene energia
             if (energia == true)
             {
+                GameObject.Find("Sound_keyboard").GetComponent<AudioSource>().Play();
                 //se obtiene su posicion 
                 Vector3 position = transform.position;
                 //se setean los limites en que se va a mover
@@ -65,6 +70,14 @@ public class Movt_L_hand : MonoBehaviour
 
                 transform.position = position;
             }
+            else
+            {
+                GameObject.Find("Sound_keyboard").GetComponent<AudioSource>().Pause();
+            }
+        }
+        else
+        {
+            GameObject.Find("Sound_keyboard").GetComponent<AudioSource>().Pause();
         }
     }
 }

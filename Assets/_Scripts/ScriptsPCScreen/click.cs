@@ -54,9 +54,24 @@ public class click : MonoBehaviour
                 }
               
             }
-            //se verifica si oprimio el icono de avast
-            if (icono.gameObject.name.Equals("SprIcon_avast"))
+            if (icono.gameObject.name.Equals("SprIcon_Config"))
             {
+                if (GameManager.dinero >= 5.9)
+                {
+                    GameManager.dinero = GameManager.dinero - 5.9;
+                    router.bug = false;
+                }
+            }
+                //se verifica si oprimio el icono de avast
+                if (icono.gameObject.name.Equals("SprIcon_avast"))
+            {
+                GameManager.actualizoAvast = true;
+                if(Virus.infectado == true)
+                {
+                    Virus.avast = true;
+
+                }
+                
                 //se verifica que el sonido de avast no se esta reproduciendo
                 if (GameObject.Find("Sonido_avast").GetComponent<AudioSource>().isPlaying == false)
                 {

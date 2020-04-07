@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 public class InGameTimer : MonoBehaviour
 {
-
+    public static bool nuevodia { get; set; }
     #region Inspector Variables
 
     [SerializeField] private TextMesh dayDisplay;
@@ -52,11 +52,14 @@ public class InGameTimer : MonoBehaviour
         // Increase the clock timers
         // if (!_isClockTicking)
         StartCoroutine(TickIngameTimer());
+        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
 
         // try to figure out if the player ran out of energy using @ProWarGamer's Shitty code :V
         if (GameObject.Find("Sonido_bostezo").GetComponent<AudioSource>().isPlaying == false && GameObject.Find("Sonido_roncando").GetComponent<AudioSource>().isPlaying == false && GameObject.FindObjectOfType<energia>().Roncando == true && GameObject.FindObjectOfType<energia>().Bostezo == true)
@@ -64,7 +67,15 @@ public class InGameTimer : MonoBehaviour
             // Increase the timer by 3
             IncreaseTimerHours(3);
         }
+        if (nuevodia == true)
+        {
+            IncreaseTimerHours(2);
+            nuevodia = false;
+        }
 
+        GameManager.dia = CurrentDay;
+        GameManager.hora = CurrentHour;
+        GameManager.min = CurrentMinute;
 
     }
 
