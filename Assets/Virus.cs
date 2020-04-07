@@ -9,10 +9,16 @@ public class Virus : MonoBehaviour
     public static bool infectado { get; set; }
     private bool informado;
 
+    private AudioSource tempAudioSource;
+    private AudioClip tempAudioclip;
+
     void Start()
     {
         infectado = false;
         avast = false;
+
+        this.tempAudioSource = this.GetComponent<AudioSource>();
+        this.tempAudioclip = tempAudioSource.clip;
     }
 
     // Update is called once per frame
@@ -24,8 +30,6 @@ public class Virus : MonoBehaviour
             if (informado == false)
             {
                 informado = true;
-                var tempAudioSource = this.GetComponent<AudioSource>();
-                var tempAudioclip = tempAudioSource.clip;
 
                 // play the keyboard sound
                 tempAudioSource.PlayOneShot(tempAudioclip);
